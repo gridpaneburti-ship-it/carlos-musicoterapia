@@ -1015,8 +1015,11 @@
           <p style="font-size: 0.9rem;">Gracias por abrir tu corazón. Te contestaré en menos de 24 horas.</p>
         </div>
 
-        <form id="formularioCariño" onsubmit="enviarMensajeWeb3(event)">
-          <!-- Web3Forms via AJAX in-page -->
+        <!-- Iframe invisible para procesar el envio sin recargar ni saltar al inicio -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <form id="formularioCariño" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe" onsubmit="alEnviarFormulario(event)">
+          <!-- Clave oficial Web3Forms -->
           <input type="hidden" name="access_key" value="09de8d91-0659-4027-a303-e55e1cc3e46c">
           <input type="hidden" name="subject" value="🌿 Nueva Reserva / Mensaje - Carlos Musicoterapia">
           <input type="hidden" name="from_name" value="Carlos Musicoterapia Web">
@@ -1225,39 +1228,26 @@
     }
 
 
-      async function enviarMensajeWeb3(e) {
-      e.preventDefault();
-      const form = document.getElementById('formularioCariño');
+    function alEnviarFormulario(e) {
       const btn = document.getElementById('btnSubmitForm');
-      const originalText = btn.innerHTML;
+      const form = document.getElementById('formularioCariño');
 
-      btn.disabled = true;
-      btn.innerHTML = "🕊️ Enviando con calma...";
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          form.reset();
-          abrirPopupConfirmacion();
-        } else {
-          // Si hubiera algun aviso, igualmente abrimos el modal porque los datos ya se enviaron
-          abrirPopupConfirmacion();
-        }
-      } catch (err) {
-        console.error("Error al enviar mensaje:", err);
-        abrirPopupConfirmacion();
-      } finally {
-        btn.disabled = false;
-        btn.innerHTML = originalText;
+      if (btn) {
+        btn.innerHTML = "🕊️ Enviando con calma...";
+        btn.disabled = true;
       }
+
+      // Mostramos de inmediato el pop-up armonioso
+      abrirPopupConfirmacion();
+
+      // Dejamos que el navegador tramite el envio al iframe y reseteamos el formulario
+      setTimeout(() => {
+        if (form) form.reset();
+        if (btn) {
+          btn.innerHTML = "✨ Enviar mensaje con serenidad";
+          btn.disabled = false;
+        }
+      }, 1500);
     }
 
     function abrirPopupConfirmacion() {
