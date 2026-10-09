@@ -1,4 +1,6 @@
+# Robots.txt para Carlos Musicoterapia
 User-agent: *
 Allow: /
 
+# Sitemap oficial indexable por Google, Bing y buscadores
 Sitemap: https://www.carlosmusicoterapia.online/sitemap.xml

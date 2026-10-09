@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdfbf7"/>
+      <stop offset="40%" stop-color="#f5ede5"/>
+      <stop offset="75%" stop-color="#eddff5"/>
+      <stop offset="100%" stop-color="#e3f0e6"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fcedc7"/>
+      <stop offset="70%" stop-color="#d4a359"/>
+      <stop offset="100%" stop-color="#b0742f"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#5a384b" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Ondas misticas en fondo -->
+  <circle cx="600" cy="315" r="380" fill="none" stroke="#d4a359" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.35"/>
+  <circle cx="600" cy="315" r="280" fill="none" stroke="#a45a66" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.25"/>
+
+  <!-- Tarjeta central -->
+  <rect x="150" y="85" width="900" height="460" rx="36" fill="#ffffff" fill-opacity="0.82" stroke="#ffffff" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Icono Loto Central -->
+  <g transform="translate(600, 190) scale(1.6)">
+    <circle cx="0" cy="0" r="32" fill="url(#sun)" opacity="0.95"/>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <path d="M0 -18 C-4 -6 -10 0 -16 6 C-8 8 -2 14 0 18 C2 14 8 8 16 6 C10 0 4 -6 0 -18 Z" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- Tipografía -->
+  <text x="600" y="320" font-family="Georgia, serif" font-size="52" font-weight="300" fill="#382e35" text-anchor="middle" letter-spacing="1">
+    Carlos Musicoterapia
+  </text>
+  
+  <text x="600" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#a45a66" text-anchor="middle" letter-spacing="4">
+    SANACIÓN SONORA · PERSONAS Y CABALLOS · CUENCOS TIBETANOS
+  </text>
+
+  <text x="600" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="300" fill="#635460" text-anchor="middle" letter-spacing="0.5">
+    Frecuencias 432 Hz y 528 Hz · Bienestar del Sistema Nervioso · Consciencia &amp; Armonía
+  </text>
+
+  <rect x="475" y="475" width="250" height="42" rx="21" fill="#c48265"/>
+  <text x="600" y="502" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">
+    WWW.CARLOSMUSICOTERAPIA.ONLINE
+  </text>
+</svg>
