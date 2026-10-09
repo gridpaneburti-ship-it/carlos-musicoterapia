@@ -1015,12 +1015,12 @@
           <p style="font-size: 0.9rem;">Gracias por abrir tu corazón. Te contestaré en menos de 24 horas.</p>
         </div>
 
-        <form id="formularioCariño" action="https://formsubmit.co/info@carlosmusicoterapia.online" method="POST">
-          <!-- Configuración de envío directo a Nominalia -->
-          <input type="hidden" name="_subject" value="Nuevo mensaje desde Carlos Musicoterapia">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://www.carlosmusicoterapia.online/#contacto?enviado=1">
+        <form id="formularioCariño" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms con entrega garantizada via Amazon SES a Nominalia -->
+          <input type="hidden" name="access_key" value="09de8d91-0659-4027-a303-e55e1cc3e46c">
+          <input type="hidden" name="subject" value="🌿 Nueva Reserva / Mensaje - Carlos Musicoterapia">
+          <input type="hidden" name="from_name" value="Carlos Musicoterapia Web">
+          <input type="hidden" name="redirect" value="https://www.carlosmusicoterapia.online/#contacto?enviado=1">
 
           <div class="form-row">
             <div class="form-group">
