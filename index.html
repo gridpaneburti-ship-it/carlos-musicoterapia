@@ -203,28 +203,7 @@
     ]
   }
   
-    function toggleMenuMovil() {
-      const nav = document.getElementById('navLinks');
-      const iconH = document.getElementById('iconHamburger');
-      const iconC = document.getElementById('iconClose');
-      
-      if (nav.classList.contains('menu-open')) {
-        cerrarMenuMovil();
-      } else {
-        nav.classList.add('menu-open');
-        if (iconH) iconH.style.display = 'none';
-        if (iconC) iconC.style.display = 'block';
-      }
-    }
 
-    function cerrarMenuMovil() {
-      const nav = document.getElementById('navLinks');
-      const iconH = document.getElementById('iconHamburger');
-      const iconC = document.getElementById('iconClose');
-      if (nav) nav.classList.remove('menu-open');
-      if (iconH) iconH.style.display = 'block';
-      if (iconC) iconC.style.display = 'none';
-    }
 
   </script>
 
@@ -1045,56 +1024,14 @@
   </style>
   <!-- Privacy-friendly analytics by Plausible -->
   <script async src="https://plausible.burtiraven4.synology.me/js/pa-6GNcijm8p1kwjBPJTRdkI.js">
-    function toggleMenuMovil() {
-      const nav = document.getElementById('navLinks');
-      const iconH = document.getElementById('iconHamburger');
-      const iconC = document.getElementById('iconClose');
-      
-      if (nav.classList.contains('menu-open')) {
-        cerrarMenuMovil();
-      } else {
-        nav.classList.add('menu-open');
-        if (iconH) iconH.style.display = 'none';
-        if (iconC) iconC.style.display = 'block';
-      }
-    }
 
-    function cerrarMenuMovil() {
-      const nav = document.getElementById('navLinks');
-      const iconH = document.getElementById('iconHamburger');
-      const iconC = document.getElementById('iconClose');
-      if (nav) nav.classList.remove('menu-open');
-      if (iconH) iconH.style.display = 'block';
-      if (iconC) iconC.style.display = 'none';
-    }
 
   </script>
   <script>
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
     plausible.init()
   
-    function toggleMenuMovil() {
-      const nav = document.getElementById('navLinks');
-      const iconH = document.getElementById('iconHamburger');
-      const iconC = document.getElementById('iconClose');
-      
-      if (nav.classList.contains('menu-open')) {
-        cerrarMenuMovil();
-      } else {
-        nav.classList.add('menu-open');
-        if (iconH) iconH.style.display = 'none';
-        if (iconC) iconC.style.display = 'block';
-      }
-    }
 
-    function cerrarMenuMovil() {
-      const nav = document.getElementById('navLinks');
-      const iconH = document.getElementById('iconHamburger');
-      const iconC = document.getElementById('iconClose');
-      if (nav) nav.classList.remove('menu-open');
-      if (iconH) iconH.style.display = 'block';
-      if (iconC) iconC.style.display = 'none';
-    }
 
   </script>
 </head>
@@ -1894,14 +1831,16 @@
     }
 
   
-    function toggleMenuMovil() {
+
+
+      function toggleMenuMovil() {
       const nav = document.getElementById('navLinks');
       const iconH = document.getElementById('iconHamburger');
       const iconC = document.getElementById('iconClose');
       
-      if (nav.classList.contains('menu-open')) {
+      if (nav && nav.classList.contains('menu-open')) {
         cerrarMenuMovil();
-      } else {
+      } else if (nav) {
         nav.classList.add('menu-open');
         if (iconH) iconH.style.display = 'none';
         if (iconC) iconC.style.display = 'block';
@@ -1916,7 +1855,6 @@
       if (iconH) iconH.style.display = 'block';
       if (iconC) iconC.style.display = 'none';
     }
-
-  </script>
+</script>
 </body>
 </html>
