@@ -202,6 +202,30 @@
       }
     ]
   }
+  
+    function toggleMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      
+      if (nav.classList.contains('menu-open')) {
+        cerrarMenuMovil();
+      } else {
+        nav.classList.add('menu-open');
+        if (iconH) iconH.style.display = 'none';
+        if (iconC) iconC.style.display = 'block';
+      }
+    }
+
+    function cerrarMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      if (nav) nav.classList.remove('menu-open');
+      if (iconH) iconH.style.display = 'block';
+      if (iconC) iconC.style.display = 'none';
+    }
+
   </script>
 
 <style>
@@ -913,18 +937,165 @@
       border-top: 1px solid rgba(220, 206, 217, 0.4);
     }
 
+    /* ESTILOS BOTÓN HAMBURGUESA Y MENÚ COMPACTO */
+    .menu-toggle-btn {
+      display: none;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(220, 206, 217, 0.8);
+      border-radius: 12px;
+      padding: 0.5rem;
+      color: var(--c-text-main);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: all 0.2s;
+    }
+    .menu-toggle-btn:hover {
+      background: #fff;
+      border-color: var(--c-gold);
+      color: var(--c-rose);
+    }
+
     @media (max-width: 768px) {
-      .hero h2 { font-size: 2.2rem; }
-      .nav-links { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; font-size: 0.82rem; margin-top: 0.5rem; }
-      .about-section { flex-direction: column; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
+      .navbar {
+        padding: 0.25rem 0;
+      }
+      .nav-wrap {
+        padding: 0.65rem 1.25rem;
+      }
+      .logo-mandala {
+        width: 36px;
+        height: 36px;
+      }
+      .logo-text h1 {
+        font-size: 1.15rem;
+      }
+      .logo-text span {
+        font-size: 0.65rem;
+      }
+
+      /* Mostrar el botón hamburguesa */
+      .menu-toggle-btn {
+        display: flex;
+      }
+
+      /* Menú desplegable móvil oculto por defecto */
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(253, 251, 247, 0.98);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(220, 206, 217, 0.5);
+        padding: 1.25rem 1.5rem 1.75rem;
+        gap: 1rem;
+        text-align: center;
+        box-shadow: 0 16px 36px rgba(56, 46, 53, 0.12);
+        animation: slideDownMenu 0.25s ease forwards;
+      }
+
+      .nav-links.menu-open {
+        display: flex !important;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(220, 206, 217, 0.3);
+      }
+      .nav-links a:last-child {
+        border-bottom: none;
+        margin-top: 0.5rem;
+      }
+
+      .hero {
+        padding: 2.5rem 1.25rem 2rem;
+      }
+      .hero h2 {
+        font-size: 1.95rem;
+        line-height: 1.3;
+      }
+      .hero p {
+        font-size: 1.05rem;
+      }
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.25rem 1.5rem;
+        gap: 1.5rem;
+      }
+      .about-avatar {
+        width: 130px;
+        height: 130px;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes slideDownMenu {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
   <!-- Privacy-friendly analytics by Plausible -->
-  <script async src="https://plausible.burtiraven4.synology.me/js/pa-6GNcijm8p1kwjBPJTRdkI.js"></script>
+  <script async src="https://plausible.burtiraven4.synology.me/js/pa-6GNcijm8p1kwjBPJTRdkI.js">
+    function toggleMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      
+      if (nav.classList.contains('menu-open')) {
+        cerrarMenuMovil();
+      } else {
+        nav.classList.add('menu-open');
+        if (iconH) iconH.style.display = 'none';
+        if (iconC) iconC.style.display = 'block';
+      }
+    }
+
+    function cerrarMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      if (nav) nav.classList.remove('menu-open');
+      if (iconH) iconH.style.display = 'block';
+      if (iconC) iconC.style.display = 'none';
+    }
+
+  </script>
   <script>
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
     plausible.init()
+  
+    function toggleMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      
+      if (nav.classList.contains('menu-open')) {
+        cerrarMenuMovil();
+      } else {
+        nav.classList.add('menu-open');
+        if (iconH) iconH.style.display = 'none';
+        if (iconC) iconC.style.display = 'block';
+      }
+    }
+
+    function cerrarMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      if (nav) nav.classList.remove('menu-open');
+      if (iconH) iconH.style.display = 'block';
+      if (iconC) iconC.style.display = 'none';
+    }
+
   </script>
 </head>
 <body>
@@ -953,17 +1124,31 @@
         </div>
       </a>
 
-      <nav class="nav-links">
-        <a href="https://www.carlosmusicoterapia.online/">Inicio</a>
-        <a href="#oasis">Oasis</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#blog" style="color: #9c5c70; font-weight: 600; background: #fdf2f4; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); border: 1px solid #ebd4db;">
+      <!-- Botón Hamburguesa Móvil (Ultra compacto) -->
+      <button class="menu-toggle-btn" id="menuToggleBtn" onclick="toggleMenuMovil()" aria-label="Abrir menú de navegación">
+        <svg id="iconHamburger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="iconClose" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Menú de Enlaces -->
+      <nav class="nav-links" id="navLinks">
+        <a href="https://www.carlosmusicoterapia.online/" onclick="cerrarMenuMovil()">Inicio</a>
+        <a href="#oasis" onclick="cerrarMenuMovil()">Oasis</a>
+        <a href="#beneficios" onclick="cerrarMenuMovil()">Beneficios</a>
+        <a href="#blog" onclick="cerrarMenuMovil()" style="color: #9c5c70; font-weight: 600; background: #fdf2f4; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); border: 1px solid #ebd4db;">
           📖 Blog
         </a>
-        <a href="#sobre-mi">Sobre Mí</a>
-        <a href="#faq">Preguntas Frecuentes</a>
-        <a href="#sesiones">Sesiones</a>
-        <a href="#contacto" class="btn-glow" style="padding: 0.55rem 1.25rem;">Contacto</a>
+        <a href="#sobre-mi" onclick="cerrarMenuMovil()">Sobre Mí</a>
+        <a href="#faq" onclick="cerrarMenuMovil()">Preguntas Frecuentes</a>
+        <a href="#sesiones" onclick="cerrarMenuMovil()">Sesiones</a>
+        <a href="#contacto" onclick="cerrarMenuMovil()" class="btn-glow" style="padding: 0.55rem 1.25rem;">Contacto</a>
       </nav>
     </div>
   </header>
@@ -1706,6 +1891,30 @@
     function cerrarArticuloBlog() {
       document.getElementById('modalBlog').style.display = 'none';
       document.body.style.overflow = 'auto';
+    }
+
+  
+    function toggleMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      
+      if (nav.classList.contains('menu-open')) {
+        cerrarMenuMovil();
+      } else {
+        nav.classList.add('menu-open');
+        if (iconH) iconH.style.display = 'none';
+        if (iconC) iconC.style.display = 'block';
+      }
+    }
+
+    function cerrarMenuMovil() {
+      const nav = document.getElementById('navLinks');
+      const iconH = document.getElementById('iconHamburger');
+      const iconC = document.getElementById('iconClose');
+      if (nav) nav.classList.remove('menu-open');
+      if (iconH) iconH.style.display = 'block';
+      if (iconC) iconC.style.display = 'none';
     }
 
   </script>
