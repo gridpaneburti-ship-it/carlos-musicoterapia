@@ -1348,6 +1348,35 @@
           </div>
         </article>
 
+        <!-- ENTRADA 3: PRENATAL -->
+        <article class="h-card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.25rem;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <span style="background: #fdf5eb; color: #a46d29; font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1.5px; padding: 0.3rem 0.85rem; border-radius: var(--radius-pill);">
+                🌸 Maternidad & Vientre
+              </span>
+              <span style="font-size: 0.78rem; color: var(--c-text-muted);">7 min de lectura</span>
+            </div>
+            
+            <h4 style="font-size: 1.6rem; color: var(--c-text-main); margin-bottom: 0.9rem; line-height: 1.3;">
+              Musicoterapia Prenatal: El primer latido y la memoria sonora del vientre
+            </h4>
+            <p style="font-size: 0.92rem; color: var(--c-text-soft); line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300;">
+              El agua amniótica conduce las vibraciones hacia el feto mucho antes de ver la luz. Descubre cómo la voz materna, los cuencos y los tonos puros tejen el primer apego seguro y preparan un parto en calma.
+            </p>
+          </div>
+          <div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button onclick="abrirArticuloBlog('prenatal')" class="btn-sound-pill" style="flex: 1; justify-content: center; font-weight: 500;">
+                Vista rápida
+              </button>
+              <a href="https://www.carlosmusicoterapia.online/musicoterapia-prenatal.html" class="btn-glow" style="flex: 1; text-align: center; justify-content: center; font-size: 0.85rem; padding: 0.65rem 1rem;">
+                Leer artículo →
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -1871,6 +1900,24 @@
   
     // ARTÍCULOS DETALLADOS DEL BLOG
     const articulosBlog = {
+      prenatal: {
+        tag: "🌸 Maternidad Consciente · Vínculo Prenatal",
+        titulo: "Musicoterapia Prenatal: El primer latido y la memoria sonora del vientre",
+        contenido: `
+          <p>Hacia la semana 16 de gestación, el sistema auditivo del feto comienza a estructurarse, y para la semana 24 el oído ya es plenamente funcional. Mucho antes de abrir los ojos a la luz del exterior, el bebé ya habita un universo puramente acústico: el latido de la placenta, la respiración materna y las frecuencias que atraviesan la pared abdominal.</p>
+          <div class="quote-box" style="margin: 1.5rem 0;">
+            "El primer hogar del ser humano no está hecho de ladrillos ni palabras, sino de ritmo: el compás incesante del corazón de la madre y la resonancia líquida de su voz."
+          </div>
+          <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">1. El agua amniótica como conductor acústico</h4>
+          <p>El sonido viaja casi cuatro veces más rápido a través del líquido que por el aire. El feto siente las ondas sonoras en toda la superficie de su cuerpo a través de la piel y los huesos. Cuando la madre se expone a tonos puros de cuencos de cuarzo o campanas armónicas en 432 Hz, las microvibraciones relajan el diafragma materno y proporcionan un masaje intrauterino reconfortante.</p>
+          
+          <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">2. La voz materna: el primer apego seguro</h4>
+          <p>Al cantar o tararear melodías suaves, las cuerdas vocales transmiten vibraciones directas a través de la columna vertebral y la pelvis hacia el útero. Este baño sonoro estimula la mielinización de las vías neuronales del feto y le enseña que el mundo exterior es un espacio seguro.</p>
+
+          <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">3. Alivio del cortisol y preparación para el parto</h4>
+          <p>La musicoterapia prenatal reduce los niveles de estrés materno que de otro modo atravesarían la placenta. Además, las técnicas de vocalización aprendidas en sesión actúan como una herramienta analgésica natural durante las contracciones de parto.</p>
+        `
+      },
       caballos: {
         tag: "🐴 Terapias Integrativas · Bienestar Animal",
         titulo: "La vibración acústica en los caballos: Sensibilidad, calma y vínculo",
@@ -1917,9 +1964,9 @@
       document.getElementById('blogContenido').innerHTML = art.contenido;
 
       // Actualizar enlaces dinamicos de compartir
-      const targetUrl = slug === 'caballos' 
-        ? 'https://www.carlosmusicoterapia.online/musicoterapia-caballos.html' 
-        : 'https://www.carlosmusicoterapia.online/musicoterapia-personas.html';
+      let targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-personas.html';
+      if (slug === 'caballos') targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-caballos.html';
+      if (slug === 'prenatal') targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-prenatal.html';
       const targetTitle = encodeURIComponent(art.titulo);
       const encodedUrl = encodeURIComponent(targetUrl);
 
