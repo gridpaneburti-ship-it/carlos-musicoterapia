@@ -843,8 +843,8 @@
     }
 
     @media (max-width: 768px) {
-      .hero h2 { font-size: 2.4rem; }
-      .nav-links { display: none; }
+      .hero h2 { font-size: 2.2rem; }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; font-size: 0.82rem; margin-top: 0.5rem; }
       .about-section { flex-direction: column; text-align: center; }
       .form-row { grid-template-columns: 1fr; }
     }
@@ -877,12 +877,14 @@
       </a>
 
       <nav class="nav-links">
-        <a href="#oasis">Oasis de Calma</a>
-        <a href="#beneficios">El Don de la Música</a>
-        <a href="#blog">Cuaderno & Blog</a>
-        <a href="#sobre-mi">Sobre Carlos</a>
+        <a href="#oasis">Oasis</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#blog" style="color: #9c5c70; font-weight: 600; background: #fdf2f4; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); border: 1px solid #ebd4db;">
+          📖 Blog
+        </a>
+        <a href="#sobre-mi">Sobre Mí</a>
         <a href="#sesiones">Sesiones</a>
-        <a href="#contacto" class="btn-glow">Escribir a Carlos</a>
+        <a href="#contacto" class="btn-glow" style="padding: 0.55rem 1.25rem;">Contacto</a>
       </nav>
     </div>
   </header>
@@ -903,11 +905,14 @@
       </p>
 
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#oasis" class="btn-glow" style="padding: 0.85rem 1.8rem; font-size: 0.95rem;">
-          🌱 Experimentar un momento de calma
+        <a href="#oasis" class="btn-glow" style="padding: 0.85rem 1.6rem; font-size: 0.95rem;">
+          🌱 Experimentar calma
         </a>
-        <a href="#beneficios" style="background: rgba(255,255,255,0.7); border: 1px solid var(--glass-border); padding: 0.85rem 1.8rem; border-radius: var(--radius-pill); text-decoration: none; color: var(--c-text-main); font-size: 0.95rem;">
-          ¿Cómo me puede ayudar?
+        <a href="#blog" style="background: rgba(255,255,255,0.9); border: 1px solid #ebd4db; padding: 0.85rem 1.6rem; border-radius: var(--radius-pill); text-decoration: none; color: #9c5c70; font-size: 0.95rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 12px rgba(156, 92, 112, 0.1);">
+          📖 Leer el Blog
+        </a>
+        <a href="#beneficios" style="background: rgba(255,255,255,0.7); border: 1px solid var(--glass-border); padding: 0.85rem 1.6rem; border-radius: var(--radius-pill); text-decoration: none; color: var(--c-text-main); font-size: 0.95rem;">
+          ¿Cómo ayuda?
         </a>
       </div>
     </section>
@@ -1032,7 +1037,7 @@
     </section>
 
         <!-- SECCIÓN BLOG: CUADERNO DE SONOTERAPIA -->
-    <section class="section-wrap" id="blog" style="padding-top: 2rem;">
+    <section class="section-wrap" id="blog" style="padding: 4rem 1.5rem; background: linear-gradient(180deg, rgba(253, 242, 244, 0.4) 0%, rgba(247, 241, 235, 0.5) 100%); border-radius: 36px; border: 1px solid #ebdcd5; margin: 3rem auto;">
       <div class="section-header">
         <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--c-gold); font-weight: 600; display: block; margin-bottom: 0.5rem;">
           Cuaderno de Sabiduría Sonora
