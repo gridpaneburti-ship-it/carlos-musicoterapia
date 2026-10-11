@@ -205,6 +205,24 @@ let audioCtx = null;
           <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">3. Memoria viva y lucidez en adultos mayores</h4>
           <p>La memoria musical es una de las últimas en degradarse en procesos neurodegenerativos. Cuando entonamos canciones de la juventud o acompañamos a personas mayores con el sonido pausado de diapasones, asistimos al milagro de la conexión: miradas que vuelven a brillar, tarareos espontáneos y una sensación de dignidad y ternura que reconecta a la persona con su esencia original.</p>
         `
+      },
+      coma: {
+        tag: "✨ Neurorehabilitación · UCI",
+        titulo: "La música en la habitación de UCI: Estar presente cuando el cuerpo calla (Glasgow 3)",
+        contenido: `
+          <p>Entrar en una unidad de cuidados intensivos siempre impone. El aire huele a antiséptico frío y el espacio está lleno de una cadencia implacable: respiradores, bombas de infusión y alarmas. En medio de todo ese ruido técnico, está la cama de alguien en coma profundo (Glasgow 3).</p>
+          <div class="quote-box" style="margin: 1.5rem 0;">
+            "Cuando el cuerpo se repliega hacia el silencio más hondo y la mirada se apaga, el oído permanece como el último guardián de la presencia humana."
+          </div>
+          <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">1. Lo que el oído retiene</h4>
+          <p>La audición es el sentido más tozudo del cuerpo humano: de los primeros en formarse dentro del vientre y casi siempre el último en marcharse. Aunque la corteza cerebral esté temporalmente desconectada o sedada, las vías auditivas del tronco encefálico siguen operativas. El cerebro primitivo capta la vibración como un cambio en el entorno sin necesidad de razonarlo.</p>
+          
+          <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">2. Mirar el monitor, no el milagro</h4>
+          <p>En Glasgow 3 no buscamos escenas de película. La respuesta está en los números pequeños: pulsaciones que bajan de 110 a 85, hombros que caen dos centímetros sobre la almohada y una respiración que deja de pelear con la máquina. El sistema nervioso autónomo reconoce el pulso cálido y el sistema parasimpático baja la guardia.</p>
+
+          <h4 style="font-size: 1.35rem; color: var(--c-text-main); margin: 1.5rem 0 0.5rem; font-family: Georgia, serif;">3. La canción de memoria y la familia</h4>
+          <p>Traer la melodía exacta que esa persona amaba enciende destellos en áreas cerebrales resistentes al daño focal. Y en la silla de al lado, la música le devuelve a la familia la posibilidad de tocar, respirar y estar presente sin el miedo a romper la frialdad de las máquinas.</p>
+        `
       }
     };
 
@@ -219,6 +237,7 @@ let audioCtx = null;
       let targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-personas.html';
       if (slug === 'caballos') targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-caballos.html';
       if (slug === 'prenatal') targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-prenatal.html';
+      if (slug === 'coma') targetUrl = 'https://www.carlosmusicoterapia.online/musicoterapia-coma.html';
       const targetTitle = encodeURIComponent(art.titulo);
       const encodedUrl = encodeURIComponent(targetUrl);
 

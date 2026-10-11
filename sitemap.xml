@@ -29,4 +29,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://www.carlosmusicoterapia.online/musicoterapia-coma.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.carlosmusicoterapia.online/images/musicoterapia-coma.jpg</image:loc>
+      <image:title>Musicoterapia en Pacientes en Coma Glasgow 3</image:title>
+    </image:image>
+  </url>
 </urlset>
