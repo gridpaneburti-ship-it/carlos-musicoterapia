@@ -208,7 +208,7 @@ let audioCtx = null;
       },
       coma: {
         tag: "✨ Neurorehabilitación · UCI",
-        titulo: "La música en la habitación de UCI: Estar presente cuando el cuerpo calla (Glasgow 3)",
+        titulo: "Musicoterapia en Pacientes en Coma: Presencia Sonora y Respuestas en Glasgow 3",
         contenido: `
           <p>Entrar en una unidad de cuidados intensivos siempre impone. El aire huele a antiséptico frío y el espacio está lleno de una cadencia implacable: respiradores, bombas de infusión y alarmas. En medio de todo ese ruido técnico, está la cama de alguien en coma profundo (Glasgow 3).</p>
           <div class="quote-box" style="margin: 1.5rem 0;">
